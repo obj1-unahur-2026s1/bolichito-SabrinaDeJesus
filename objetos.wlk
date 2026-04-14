@@ -62,3 +62,34 @@ object placa {
    color = colorActual
   }
 }
+
+//Objetos agregados:
+object arito {
+  method color() = celeste
+  method material() = cobre
+  method peso() = 180
+}
+
+object banquito {
+  var color = naranja
+  method material() = madera
+  method peso() = 1700
+  method color() = color
+  method cambiarColor(nuevoColor)  {
+    color = nuevoColor
+  }
+}
+object naranja {
+  method esFuerte() = true
+}
+
+object cajita {
+  var objetoInterior = arito
+  method color() = rojo
+  method material() = cobre
+  method contiene() = objetoInterior
+  method cambiarContenido(objetoNuevo) {
+    objetoInterior = objetoNuevo
+  }
+  method peso() = 400 + objetoInterior.peso()
+}
